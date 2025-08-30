@@ -39,7 +39,7 @@ const ModalComponent = ({ open, handleClose, entry,setSchedule }) => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/editSchedule",
+        "https://neuroplan.onrender.com/api/editSchedule",
         { id: entry._id, time: time, task: task},
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

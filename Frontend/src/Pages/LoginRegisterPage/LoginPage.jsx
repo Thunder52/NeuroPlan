@@ -22,7 +22,7 @@ const LoginRegisterPage = () => {
     e.preventDefault();
     if(isLogin){
         try {
-            const res= await axios.post('http://localhost:5000/api/auth/login',{email,password});
+            const res= await axios.post('https://neuroplan.onrender.com/api/auth/login',{email,password});
             if(res.data){
                 alert(res.data.message);
                 localStorage.setItem('token',res.data.token);
@@ -39,7 +39,7 @@ const LoginRegisterPage = () => {
         }
     }else{
         try {
-            const res= await axios.post('http://localhost:5000/api/auth/register',{name,email,password});
+            const res= await axios.post('https://neuroplan.onrender.com/api/auth/register',{name,email,password});
             if(res.data.success){
                 alert(res.data.message);
                 localStorage.setItem('token',res.data.token);

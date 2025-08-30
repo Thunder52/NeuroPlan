@@ -5,7 +5,7 @@ import PromtPage from "../PromtPage/PromtPage";
 import TimeTableSection from "../TimeTableSection/TimeTableSection";
 import { useEffect, useState } from "react";
 import ModalComponent from "../../component/ModalComponent/ModalComponent";
-import Loading from "../../component/Loading/Loading";
+
 
 const Home = () => {
   const [schedule, setSchedule] = useState([]);
@@ -16,7 +16,7 @@ const Home = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/schedule",
+        "https://neuroplan.onrender.com/api/schedule",
         { promt: promt },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -33,7 +33,7 @@ const Home = () => {
 
 useEffect(() => {
   const fetchSchedule = async () => {
-    const res = await axios.get("http://localhost:5000/api/schedule", {
+    const res = await axios.get("https://neuroplan.onrender.com/api/schedule", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
     setSchedule(res.data || []);
