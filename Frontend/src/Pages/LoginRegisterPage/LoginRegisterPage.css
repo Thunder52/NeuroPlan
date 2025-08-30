@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins&display=swap');
+
+/* font-family: "Poppins", serif; */
+/* font-family: "Playfair Display", serif; */
+body {
+  /* background: linear-gradient(135deg, #050A30, #093FB4); */
+  background-color: #050B31 !important;
+  font-family: "Arial", sans-serif;
+  height: 100%;
+
+}
+
+.card {
+  animation: fadeIn 0.8s ease-in-out;
+  background-color: #093FB4!important;
+}
+.form-label{
+  font-family: "Poppins", serif;
+  text-align: left !important;
+}
+
+.btn-primary {
+  background-color: #5EABD6;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3f7899;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
