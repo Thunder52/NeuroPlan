@@ -74,7 +74,7 @@ const Navbar = () => {
           </Link>
         </Stack>
         {isLogin ? (
-          <Stack direction="row" alignItems="center" spacing={1}>
+          <Stack direction="row" alignItems="center" spacing={2}>
             <Typography variant="body1" sx={{ color: "white" }}>
               Welcome back! {user?.name}
             </Typography>
