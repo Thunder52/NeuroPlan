@@ -9,7 +9,12 @@ dotenv.config();
 const app=express();
 const PORT=process.env.PORT || 5000;
 app.use(express.json());
-app.use(cors());
+const crossOptions={
+  origin:["http://localhost:5173","https://www.neuroplan.me"],
+  methods:"GET,POST,PUT,PATCH",
+  credentials:true
+}
+app.use(cors(crossOptions));
 app.use(express.urlencoded({ extended: true }));
 connectDB();
 

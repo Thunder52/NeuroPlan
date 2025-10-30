@@ -27,7 +27,7 @@ const LoginRegisterPage = () => {
                 alert(res.data.message);
                 localStorage.setItem('token',res.data.token);
                 localStorage.setItem('user',JSON.stringify(res.data.user));
-                navigate('/');
+                navigate('/home');
                 setEmail('');
                 setPassword('');
             }else{
@@ -44,7 +44,7 @@ const LoginRegisterPage = () => {
                 alert(res.data.message);
                 localStorage.setItem('token',res.data.token);
                 localStorage.setItem('name',res.data.name);
-                navigate('/');
+                navigate('/home');
                 setIsLogin(true);
             }else{
                 alert(res.data.message);
